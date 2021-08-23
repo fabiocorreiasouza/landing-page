@@ -1,10 +1,148 @@
+/* GENERAL RULES */
+
 @charset "UTF-8";
 
 :root {  
     font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
+* {
     margin: 0 auto;
     padding: 0;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: flex-end;
+    background-image: url("../images/pexels-loïc-manegarium-1920px.jpg");
+    height: 100vh;
+}
+
+/* TITLES */
+
+h1,
+h2 {
+    text-align: center;
+    color:white;
+    margin-block-end: 1em;;
+}
+
+/* PILOSOPHY */
+/* ------------------------------------------------------------------------------------------------------ */
+
+section.philosophy {
+    background-color: #212121;
+    color: white;
+    padding-block: 2em;
+    text-align: center;
+}
+
+section.philosophy p {
+    max-width: 50em;
+}
+
+/* COURSES */
+/* ------------------------------------------------------------------------------------------------------ */
+
+section.courses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em;
+    background-image: url("../images/pexels-daian-gan-1920px.jpg");
+}
+
+section.courses div {
+    flex: 1 10em;
+    max-width: 15em;
+    margin: 0.5em;
+    padding: 1em;
+    border-radius: .5em;
+    background-color: white; 
+}
+
+section.courses div img {
+    max-width: 100%; 
+}
+
+section.courses div p {
+    margin-top: 2em;
+}
+
+/* OBECTIVES */
+/* ------------------------------------------------------------------------------------------------------ */
+
+section.objectives {
+    display: flex;
+    margin: 4em;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section.objectives div,
+section.objectives ul {
+    flex: 1 20em;
+    min-width: 20em;
+    margin-inline: 4em;
+}
+
+section.objectives div > img {
+    max-width: 100%;
+    margin-block: 1em;
+}
+
+section.objectives ul {
+    list-style-position: inside;
+    
+}
+
+section.objectives ul li {
+    margin-block: 3em;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+/* SIGN UP */
+/* ------------------------------------------------------------------------------------------------------ */
+
+section.sign-up {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em;
+    background-image: url("../images/pexels-steve-johnson-1920px.jpg");
+}
+
+section.sign-up .box,
+section.sign-up form {
+    flex: 1 13em;
+    margin: 1em;
+    padding: 1em;
+    max-width: 20em;
+    min-height: 15em;
+    background-color: white;
+    border-radius: 0.5em;
+    
+}
+
+section.sign-up .box  p {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+section.sign-up form > * {
+    margin-block: 1em;
+}
+
+/* FOOTER */
+/* ------------------------------------------------------------------------------------------------------ */
+
+footer {
+    background-color: #212121;
+    color: white;
+    padding: 1.5em;
+    font-size: .8em;
 }
