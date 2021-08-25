@@ -2,13 +2,47 @@
 
 @charset "UTF-8";
 
-:root {  
-    font-family:Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+:root {
+    --dark: #212121;
+    --lightgreen: #45D6A9;
+    --rightgreen: #01b34b;
+
+    --default-font-family: Arial, Helvetica, sans-serif;
+    --main-title-font: 'Fredericka the Great', cursive;
 }
 
 * {
     margin: 0 auto;
     padding: 0;
+}
+
+body {
+    font-family: var(--default-font-family);
+}
+
+/* TITLES */
+
+h1,
+h2 {
+    text-align: center;
+    color:white;
+    margin-block-end: 1em;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.705);
+}
+
+h1 > span {
+    display: block;
+    font-family: var(--main-title-font);
+    font-size: 2em;
+}
+
+section.courses h2,
+section.sign-up > .box > h2 {
+    color: black;
+    font-size: 1em;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.37);
 }
 
 /* HEADER */
@@ -20,20 +54,10 @@ header {
     height: 100vh;
 }
 
-/* TITLES */
-
-h1,
-h2 {
-    text-align: center;
-    color:white;
-    margin-block-end: 1em;;
-}
-
-/* PILOSOPHY */
-/* ------------------------------------------------------------------------------------------------------ */
+/* PHILOSOPHY SECTION */
 
 section.philosophy {
-    background-color: #212121;
+    background-color: var(--dark);
     color: white;
     padding-block: 2em;
     text-align: center;
@@ -41,10 +65,10 @@ section.philosophy {
 
 section.philosophy p {
     max-width: 50em;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.452);
 }
 
-/* COURSES */
-/* ------------------------------------------------------------------------------------------------------ */
+/* COURSES SECTION */
 
 section.courses {
     display: flex;
@@ -54,25 +78,21 @@ section.courses {
     background-image: url("../images/pexels-daian-gan-1920px.jpg");
 }
 
-section.courses div {
+section.courses > article {
     flex: 1 10em;
     max-width: 15em;
     margin: 0.5em;
     padding: 1em;
-    border-radius: .5em;
+    border-radius: 0.5em;
     background-color: white; 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.51);
 }
 
-section.courses div img {
-    max-width: 100%; 
+section.courses > article > img {
+    max-width: 100%;
 }
 
-section.courses div p {
-    margin-top: 2em;
-}
-
-/* OBECTIVES */
-/* ------------------------------------------------------------------------------------------------------ */
+/* OBECTIVES SECTION */
 
 section.objectives {
     display: flex;
@@ -82,7 +102,7 @@ section.objectives {
     flex-wrap: wrap;
 }
 
-section.objectives div,
+section.objectives > div,
 section.objectives ul {
     flex: 1 20em;
     min-width: 20em;
@@ -92,21 +112,21 @@ section.objectives ul {
 section.objectives div > img {
     max-width: 100%;
     margin-block: 1em;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.37);
 }
 
-section.objectives ul {
-    list-style-position: inside;
+section.objectives > ul {
+    list-style-image: url("../images/check-40px.png");
     
 }
 
-section.objectives ul li {
+section.objectives > ul li {
     margin-block: 3em;
     font-size: 2em;
     line-height: 1.5em;
 }
 
-/* SIGN UP */
-/* ------------------------------------------------------------------------------------------------------ */
+/* SIGN UP SECTION */
 
 section.sign-up {
     display: flex;
@@ -116,8 +136,8 @@ section.sign-up {
     background-image: url("../images/pexels-steve-johnson-1920px.jpg");
 }
 
-section.sign-up .box,
-section.sign-up form {
+section.sign-up > .box,
+section.sign-up > form {
     flex: 1 13em;
     margin: 1em;
     padding: 1em;
@@ -125,7 +145,15 @@ section.sign-up form {
     min-height: 15em;
     background-color: white;
     border-radius: 0.5em;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.51);
     
+}
+
+section.sign-up > .box > img {
+    display: block;
+    max-width: 5em;
+    margin: auto;
+    margin-block-end: 1em;
 }
 
 section.sign-up .box  p {
@@ -133,16 +161,64 @@ section.sign-up .box  p {
     line-height: 1.5em;
 }
 
-section.sign-up form > * {
-    margin-block: 1em;
+section.sign-up > form > p {
+    margin-block: 2em;
+}
+
+form  input {
+    border: none;
+    border-bottom: 3px solid lightgray;
+    padding: 0.5em;
+}
+
+form input:focus{
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.274);
+}
+
+form button {
+    display: block;
+    margin: auto;
+    background-color: var(--lightgreen);
+    color: white;
+    font-weight:bold;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    width: 15em;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.281);
+}
+
+form button:hover {
+    background-color: var(--rightgreen);
+    transition-delay: 0.1s;
+}
+
+form button:active {
+    background-color: var(--lightgreen);
 }
 
 /* FOOTER */
-/* ------------------------------------------------------------------------------------------------------ */
 
 footer {
-    background-color: #212121;
+    background-color: var(--dark);
     color: white;
     padding: 1.5em;
-    font-size: .8em;
+    font-size: 0.8em;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.452);
+
+}
+
+footer > ul {
+    list-style-type: none;
+    columns: 2;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: none;
 }
